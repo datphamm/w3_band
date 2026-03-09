@@ -67,17 +67,17 @@
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="members-list">
-                    <div class="member-item">
+                    <div class="col col-third text-center">
                         <div class="member-name">Name</div>
                         <img src="./assets/img/bandmember.jpg" alt="Name" class="member-img">
                     </div>
 
-                    <div class="member-item">
+                    <div class="col col-third text-center">
                         <div class="member-name">Name</div>
                         <img src="./assets/img/bandmember.jpg" alt="Name" class="member-img">
                     </div>
 
-                    <div class="member-item">
+                    <div class="col col-third text-center">
                         <div class="member-name">Name</div>
                         <img src="./assets/img/bandmember.jpg" alt="Name" class="member-img">
                     </div>
@@ -97,8 +97,8 @@
                         <li>November <span class="quantity">3</span></li>
                     </ul>
 
-                    <div class="places-list">
-                        <div class="place-item">
+                    <div class="row places-list">
+                        <div class="col col-third">
                             <img src="./assets/img/newyork.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
@@ -108,7 +108,7 @@
                             </div>
 
                         </div>
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="./assets/img/paris.jpg" alt="Paris" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
@@ -118,7 +118,7 @@
                             </div>
                         </div>
 
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="./assets/img/sanfran.jpg" alt="San Francisco" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
@@ -191,27 +191,27 @@
 
     <script>
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
-        const modal=document.querySelector('.js-modal')
-        const modalContainer=document.querySelector('.js-modal-container')
-        const modalClose=document.querySelector('.js-modal-close')
+        const modal = document.querySelector('.js-modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+        const modalClose = document.querySelector('.js-modal-close')
         //Hàm hiển thị modal mua vé (thêm clas open vào modal)
-        function showBuyTickets(){
+        function showBuyTickets() {
             modal.classList.add('open')
         }
-    
-        function hideBuyTickets(){
+
+        function hideBuyTickets() {
             modal.classList.remove('open')
         }
 
-        for (const buyBtn of buyBtns){
-            buyBtn.addEventListener('click',showBuyTickets )
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
         }
 
-        modalClose.addEventListener('click',hideBuyTickets)
+        modalClose.addEventListener('click', hideBuyTickets)
 
-        modal.addEventListener('click',hideBuyTickets)
+        modal.addEventListener('click', hideBuyTickets)
 
-        modalContainer.addEventListener('click', function(event){
+        modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
 
